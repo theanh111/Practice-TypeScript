@@ -39,8 +39,13 @@ do {
 } while (idx < keys.length);
 
 console.log("for-of loop");
-for (const item of keys) {
-  console.log(item);
+// for (const item of keys) {
+//   console.log(item);
+// }
+// // EMCAScrpit higher
+
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i]);
 }
 
 console.log("for-in loop");
