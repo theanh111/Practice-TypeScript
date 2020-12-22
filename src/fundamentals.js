@@ -1,6 +1,6 @@
-import "./scss/styles.scss";
-
-// Code 1:
+"use strict";
+exports.__esModule = true;
+require("./scss/styles.scss");
 // (function main() {
 //     console.log("START");
 //     if (true) {
@@ -12,8 +12,7 @@ import "./scss/styles.scss";
 //     console.log(lang);
 //     console.log(target);
 // })();
-
-// Code 2:
+//
 // (function main() {
 //     var x = 5;
 //     console.log(x);
@@ -25,71 +24,54 @@ import "./scss/styles.scss";
 //     var y = 100;
 //     console.log(y);
 // })();
-
-// Code 3:
 // (function main() {
 //     var x = 5;
 //     console.log(x);
 //     let y = 10;
 //     console.log(y);
 // })();
-
-// Code 4:
 (function main() {
-    let message: string;
-    let total: number = 100;
-    let isProduction = true;
-    let prices: Array<number> = [120, 88, 60];
-    let languages: string[] = ['vi', 'en-us'];
-    let now = new Date();
-    let unknown: any;
-
-    enum Direction {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT
-    };
-
-    function log(msg: string): void {
-        console.log(msg)
+    var message;
+    var total = 100;
+    var isProduction = true;
+    var prices = [120, 88, 60];
+    var languages = ['vi', 'en-us'];
+    var now = new Date();
+    var unknown;
+    var Direction;
+    (function (Direction) {
+        Direction[Direction["UP"] = 0] = "UP";
+        Direction[Direction["DOWN"] = 1] = "DOWN";
+        Direction[Direction["LEFT"] = 2] = "LEFT";
+        Direction[Direction["RIGHT"] = 3] = "RIGHT";
+    })(Direction || (Direction = {}));
+    ;
+    function log(msg) {
+        console.log(msg);
     }
-
-    interface IPost {
-        id: string;
-        title: string;
-        body?: string;
-    }
-
     isProduction = false;
     unknown = Direction.UP;
     unknown = 'changed';
-
-    const post: IPost = {
+    var post = {
         id: "day la ID",
         title: "Day la Title",
         body: "day la Body"
     };
     message = "Ban oi! Ban khong choi do la suc de khang ban kem day!";
-
-    function getPost(postId: string): IPost {
+    function getPost(postId) {
         // do something to retrieve post
         return {
             id: postId,
             title: 'Post Title',
             body: 'Post Body',
             extra: 'data'
-        } as IPost;
+        };
     }
 })();
-
-
 /**
  * Variable and Data type
  */
-
 // tslint:disable
-
 /**
  * var vs let/const
  */
@@ -119,7 +101,6 @@ function main() {
   console.log(y);
 }
 */
-
 /*
 function main() {
   console.log(x);
@@ -129,7 +110,6 @@ function main() {
   let y = 10;
 }
  */
-
 /**
  * Data types
  */
@@ -180,9 +160,6 @@ function main() {
   }
 }
  */
-
-function main() {}
-
+function main() { }
 // tslint:enable
-
 main();
